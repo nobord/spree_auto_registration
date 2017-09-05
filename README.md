@@ -14,7 +14,7 @@ Spree.user_class = "Spree::User"
 
 Tested for Sreee *3.3.0.rc1*, but maybe will works also with older versions.
 
-*This is one of my first gems ... for my first project with Spree, so please have an understanding if something is not perfect. Your contribution or advice what to improve is very welcome! It works fine for me and it should works for standard purposes, but I do not give any guaranty that it will works with your particular configuration of Spree.*
+**note: This is one of my first gems ... for my first project with Spree, so please have an understanding if something is not perfect. Your contribution or advice what to improve is very welcome! It works fine for me and it should works for standard purposes, but I do not give any guaranty that it will works with your particular configuration of Spree.**
 
 ## Installation
 

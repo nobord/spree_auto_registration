@@ -1,18 +1,15 @@
-<h2>zde tedy dojde nějak k potvrzení ...</h2>
-
-# app/views/confirmations/show.html.erb
-<h2>Account Activation</h2>
+<h2>Aktivujte svůj účet:</h2>
 
 <%= form_for resource, url: update_spree_user_confirmation_path, method: :put, html: {id: 'activation-form'} do |f| %>
   <%= devise_error_messages! %>
   <fieldset>
-    <legend>Account Activation<% if resource.try(:login) %> for <%= resource.login %><% end %></legend>
+    <legend>Zvolte heslo pro účet<% if resource.try(:login) %> <%= resource.login %><% end %></legend>
 
   <% if @requires_password %>
-      <p><%= f.label :password,'Choose a Password:' %> <%= f.password_field :password %></p>
-      <p><%= f.label :password_confirmation,'Password Confirmation:' %> <%= f.password_field :password_confirmation %></p>
+      <p><%= f.label :password,'Vaše heslo:' %> <%= f.password_field :password %></p>
+      <p><%= f.label :password_confirmation,'Pro jistotu ještě jednou:' %> <%= f.password_field :password_confirmation %> (abychom vyloučili překlep)</p>
   <% end %>
   <%= hidden_field_tag :confirmation_token, @confirmation_token %>
-  <p><%= f.submit "Activate" %></p>
+  <p><%= f.submit "Aktivovat" %></p>
   </fieldset>
 <% end %>
