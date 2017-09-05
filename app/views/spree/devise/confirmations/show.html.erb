@@ -3,7 +3,7 @@
 <%= form_for resource, url: update_spree_user_confirmation_path, method: :put, html: {id: 'activation-form'} do |f| %>
   <%= devise_error_messages! %>
   <fieldset>
-    <legend>Zvolte heslo pro účet<% if resource.try(:login) %> <%= resource.login %><% end %></legend>
+    <legend><%= t("choose_password")%><% if resource.try(:login) %> <%= resource.login %><% end %></legend>
 
   <% if @requires_password %>
       <p><%= f.label :password, Spree.t(:password) %> <%= f.password_field :password %></p>
